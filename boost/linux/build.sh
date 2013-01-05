@@ -1,10 +1,5 @@
 #!/bin/bash
 
-
-./bootstrap.sh || exit 1
-./b2 install --prefix=./prebuilt --with-system || exit 1
-rm  ./prebuilt/lib/* || exit 1
-
 pushd tools/build/v2 || exit 1
 ./bootstrap.sh || exit 1
 ./b2 install --prefix=../../../prebuilt/tool/linuxx86 || exit 1
